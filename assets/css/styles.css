@@ -1,0 +1,279 @@
+:root {
+  --bg: #f6f8fa;
+  --card: #fff;
+  --accent: #1565c0;
+  --text: #222;
+}
+
+/* ========== Reset & Base ========== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ========== Cabeçalho ========== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  flex-wrap: wrap;
+}
+
+.logo-small {
+  width: 48px;
+  height: 48px;
+}
+
+/* ========== Conteúdo principal ========== */
+.container {
+  max-width: 980px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+}
+
+/* ========== Sumário ========== */
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toc a {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  margin: 0.4rem 0;
+  background: var(--card);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--accent);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: background 0.2s;
+}
+
+.toc a:hover {
+  background: #eaf2fc;
+}
+
+/* ========== Botões ========== */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #0d47a1;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* ========== Formulário de Certificado ========== */
+.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.form-inline input {
+  flex: 1 1 240px;
+  padding: 0.5rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+/* ========== Modal de boas-vindas ========== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.22s;
+  z-index: 10;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  background: var(--card);
+  padding: 1.4rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+}
+
+.logo-large {
+  width: 120px;
+  margin-bottom: 0.6rem;
+}
+
+/* ========== Versículo clicável ========== */
+.verse {
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ========== Responsividade ========== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0.8rem;
+  }
+
+  .toc a {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-inline input,
+  .form-inline .btn {
+    width: 100%;
+  }
+
+  .logo-large {
+    width: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .toc a {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+}
+
+/* ====== Estilo adicional para a página "Quem é Deus" ====== */
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: var(--accent);
+  font-size: 2rem;
+  margin: 2rem 0 1.5rem 0;
+}
+
+/* Títulos das seções */
+h2 {
+  color: var(--accent);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid var(--accent);
+}
+
+/* Seções */
+section {
+  background: var(--card);
+  padding: 1.5rem 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  line-height: 1.6;
+}
+
+/* Listas */
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Explicações, Reflexão e Atividades */
+p {
+  margin-bottom: 0.8rem;
+}
+
+p strong {
+  color: var(--accent);
+}
+
+/* Versículos clicáveis (com efeito hover) */
+.verse {
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.verse:hover {
+  color: #0d47a1;
+}
+
+/* Responsividade adicional */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  section {
+    padding: 1rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  section {
+    padding: 0.8rem 0.6rem;
+  }
+}

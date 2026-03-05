@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Batismo nas Águas — Curso</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <!-- Modal de Boas-vindas -->
+  <div id="welcomeModal" class="modal show">
+    <div class="modal-content">
+      <img src="assets/img/logo.svg" class="logo-large" alt="logo" />
+      <h1>Batismo nas Águas</h1>
+      <p>Início de uma nova vida em Cristo — Curso interativo</p>
+      <button id="startBtn" class="btn">Iniciar</button>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="site-header">
+    <img src="assets/img/logo.svg" class="logo-small" alt="logo" />
+    <h2>Batismo nas Águas</h2>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container">
+    <!-- Sumário -->
+    <section>
+      <h3>Sumário</h3>
+      <nav class="toc">
+        <ul>
+          <!-- Tópico 1: Introdução -->
+          <li><a href="pages/topic1_introducao/1_Quem_e_Deus.html">Quem é Deus?</a></li>
+          <li><a href="pages/topic1_introducao/2_Quem_e_Jesus_Cristo.html">Quem é Jesus Cristo?</a></li>
+          <li><a href="pages/topic1_introducao/3_O_papel_do_Espirito_Santo.html">O papel do Espírito Santo</a></li>
+          <li><a href="pages/topic1_introducao/4_A_Biblia_como_a_Palavra_de_Deus.html">A Bíblia como a Palavra de Deus</a></li>
+
+          <!-- Tópico 2: Pecado e Salvação -->
+          <li><a href="pages/topic2_pecado_salvacao/1_O_que_e_o_Pecado.html">O que é o pecado?</a></li>
+          <li><a href="pages/topic2_pecado_salvacao/2_Consequencias_do_Pecado.html">Consequências do pecado</a></li>
+          <li><a href="pages/topic2_pecado_salvacao/3_A_Necessidade_de_um_Salvador.html">A necessidade de um Salvador</a></li>
+          <li><a href="pages/topic2_pecado_salvacao/4_A_obra_redentora_de_Jesus_Cristo.html">A obra redentora de Jesus Cristo</a></li>
+
+          <!-- Tópico 3: Batismo -->
+          <li><a href="pages/topic3_batismo/1_O_que_e_o_Batismo.html">O que é o batismo?</a></li>
+          <li><a href="pages/topic3_batismo/2_Por_que_Jesus_foi_batizado.html">Por que Jesus foi batizado?</a></li>
+          <li><a href="pages/topic3_batismo/3_Simbolismo_Morte_Sepultamento_Ressurreicao.html">O simbolismo da morte, sepultamento e ressurreição em Cristo</a></li>
+          <li><a href="pages/topic3_batismo/4_Testemunho_publico_de_fe.html">Testemunho público de fé</a></li>
+
+          <!-- Tópico 4: Vida e Discipulado -->
+          <li><a href="pages/topic4_vida_discipulado/1_O_que_significa_seguir_Jesus.html">O que significa seguir a Jesus?</a></li>
+          <li><a href="pages/topic4_vida_discipulado/2_Praticas_Espirituais.html">Práticas espirituais (oração, leitura da Bíblia, comunhão)</a></li>
+          <li><a href="pages/topic4_vida_discipulado/3_Importancia_da_comunidade.html">Importância da comunidade cristã (igreja)</a></li>
+          <li><a href="pages/topic4_vida_discipulado/4_Frutos_do_Espirito.html">Frutos do Espírito (Gálatas 5:22-23)</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Questionário e Certificado -->
+    <section class="final">
+      <h3>Questionário Geral e Certificado</h3>
+      <div class="form-inline">
+        <input id="certName" placeholder="Seu nome completo" />
+        <input id="certCpf" placeholder="CPF (somente números)" maxlength="11" />
+        <button id="openGeneralQuiz" class="btn">Fazer questionário geral</button>
+      </div>
+      <div id="certResult"></div>
+    </section>
+  </main>
+
+  <!-- Script principal -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
